@@ -1086,7 +1086,6 @@ _FX NTSTATUS KphValidateCertificate()
         }
     }*/
 
-    expiration_date.QuadPart = -1;
     Verify_CertInfo.expired = 0;
     Verify_CertInfo.outdated = 0;
     Verify_CertInfo.active = 1;
