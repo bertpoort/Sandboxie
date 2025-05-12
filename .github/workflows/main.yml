@@ -163,8 +163,8 @@ jobs:
     # - name: Get openssl binaries
     #   run: Installer\get_openssl.cmd
 
-      - name: Get 7z binaries
-        run: Installer\get_7zip.cmd
+    # - name: Get 7z binaries
+    #   run: Installer\get_7zip.cmd
 
       - name: Merging Build
         run: Installer\copy_build.cmd x64
@@ -281,8 +281,8 @@ jobs:
     # - name: Get openssl binaries
     #   run: Installer\get_openssl.cmd
 
-      - name: Get 7z binaries
-        run: Installer\get_7zip.cmd
+    # - name: Get 7z binaries
+    #   run: Installer\get_7zip.cmd
 
       - name: Merging Build
         run: Installer\copy_build.cmd ARM64 build_qt6
@@ -350,8 +350,8 @@ jobs:
     # - name: Get openssl binaries
     #   run: Installer\get_openssl.cmd
 
-      - name: Get 7z binaries
-        run: Installer\get_7zip.cmd
+    # - name: Get 7z binaries
+    #   run: Installer\get_7zip.cmd
 
       - name: Merging Build
         run: Installer\copy_build.cmd x86
@@ -448,8 +448,8 @@ jobs:
     # - name: Get openssl binaries
     #   run: Installer\get_openssl.cmd
 
-      - name: Get 7z binaries
-        run: Installer\get_7zip.cmd
+    # - name: Get 7z binaries
+    #   run: Installer\get_7zip.cmd
 
       - name: Merging Build
         run: Installer\copy_build.cmd x64 build_qt6
