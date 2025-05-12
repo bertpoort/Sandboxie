@@ -160,8 +160,8 @@ jobs:
     # - name: Add missing languages for Qt5 (issue 1528)
     #   run: Installer\fix_qt5_languages.cmd x64
 
-      - name: Get openssl binaries
-        run: Installer\get_openssl.cmd
+    # - name: Get openssl binaries
+    #   run: Installer\get_openssl.cmd
 
       - name: Get 7z binaries
         run: Installer\get_7zip.cmd
@@ -278,8 +278,8 @@ jobs:
     # - name: Add missing languages for Qt6 (issue 1528)
     #   run: Installer\fix_qt5_languages.cmd x64 build_qt6
 
-      - name: Get openssl binaries
-        run: Installer\get_openssl.cmd
+    # - name: Get openssl binaries
+    #   run: Installer\get_openssl.cmd
 
       - name: Get 7z binaries
         run: Installer\get_7zip.cmd
@@ -347,8 +347,8 @@ jobs:
     # - name: Add missing languages for Qt5 (issue 1528)
     #   run: Installer\fix_qt5_languages.cmd Win32
 
-      - name: Get openssl binaries
-        run: Installer\get_openssl.cmd
+    # - name: Get openssl binaries
+    #   run: Installer\get_openssl.cmd
 
       - name: Get 7z binaries
         run: Installer\get_7zip.cmd
@@ -445,8 +445,8 @@ jobs:
     # - name: Add missing languages for Qt6 (issue 1528)
     #   run: Installer\fix_qt5_languages.cmd x64 build_qt6
 
-      - name: Get openssl binaries
-        run: Installer\get_openssl.cmd
+    # - name: Get openssl binaries
+    #   run: Installer\get_openssl.cmd
 
       - name: Get 7z binaries
         run: Installer\get_7zip.cmd
