@@ -157,8 +157,8 @@ jobs:
 #      - name: Add Windows 7 compatible Qt6 DLLs
 #        run: Installer\fix_qt6_win7.cmd
 
-      - name: Add missing languages for Qt5 (issue 1528)
-        run: Installer\fix_qt5_languages.cmd x64
+    # - name: Add missing languages for Qt5 (issue 1528)
+    #   run: Installer\fix_qt5_languages.cmd x64
 
       - name: Get openssl binaries
         run: Installer\get_openssl.cmd
@@ -274,8 +274,8 @@ jobs:
     # Merge everything together
     #
 
-      - name: Add missing languages for Qt6 (issue 1528)
-        run: Installer\fix_qt5_languages.cmd x64 build_qt6
+    # - name: Add missing languages for Qt6 (issue 1528)
+    #   run: Installer\fix_qt5_languages.cmd x64 build_qt6
 
       - name: Get openssl binaries
         run: Installer\get_openssl.cmd
@@ -342,8 +342,8 @@ jobs:
     # Merge everything together
     #
 
-      - name: Add missing languages for Qt5 (issue 1528)
-        run: Installer\fix_qt5_languages.cmd Win32
+    # - name: Add missing languages for Qt5 (issue 1528)
+    #   run: Installer\fix_qt5_languages.cmd Win32
 
       - name: Get openssl binaries
         run: Installer\get_openssl.cmd
@@ -439,8 +439,8 @@ jobs:
 #      - name: Add Windows 7 compatible Qt6 DLLs
 #        run: Installer\fix_qt6_win7.cmd
 
-      - name: Add missing languages for Qt6 (issue 1528)
-        run: Installer\fix_qt5_languages.cmd x64 build_qt6
+    # - name: Add missing languages for Qt6 (issue 1528)
+    #   run: Installer\fix_qt5_languages.cmd x64 build_qt6
 
       - name: Get openssl binaries
         run: Installer\get_openssl.cmd
