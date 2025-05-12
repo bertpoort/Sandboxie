@@ -563,7 +563,11 @@ _FX NTSTATUS KphValidateCertificate()
     LARGE_INTEGER check_date = { 0 };
     LONG days = 0;
 
-    Verify_CertInfo.State = 0; // clear
+    Verify_CertInfo.State = 1; // clear
+    Verify_CertInfo.expired = 0;
+    Verify_CertInfo.outdated = 0;
+    Verify_CertInfo.active = 1;
+    Verify_CertInfo.lock_req = 0;
 
     if(!NT_SUCCESS(status = MyInitHash(&hashObj)))
         goto CleanupExit;
@@ -582,7 +586,7 @@ _FX NTSTATUS KphValidateCertificate()
         goto CleanupExit;
     }
 
-    RtlStringCbPrintfW(path, path_len, path_cert, Driver_HomePathDos);
+    /*RtlStringCbPrintfW(path, path_len, path_cert, Driver_HomePathDos);
 
     status = Stream_Open(&stream, path, FILE_GENERIC_READ, 0, FILE_SHARE_READ, FILE_OPEN, 0);
     if (!NT_SUCCESS(status)) {
@@ -649,7 +653,7 @@ _FX NTSTATUS KphValidateCertificate()
         /*if (*value == '"') {
             value++;
             value[wcslen(value) - 1] = 0;
-        }*/
+        }*//*
 
         //
         // Extract and decode the signature
@@ -820,11 +824,11 @@ _FX NTSTATUS KphValidateCertificate()
     }
 
     if (!NT_SUCCESS(status))
-        goto CleanupExit;
+        goto CleanupExit;*/
 
     Verify_CertInfo.active = 1;
 
-    if (!type && level) { // fix for some early hand crafted contributor certificates
+    /*if (!type && level) { // fix for some early hand crafted contributor certificates
         type = level;
         level = NULL;
     }
@@ -906,9 +910,11 @@ _FX NTSTATUS KphValidateCertificate()
     else //if (_wcsicmp(type, L"PERSONAL") == 0 || _wcsicmp(type, L"SUPPORTER") == 0)
     {
         Verify_CertInfo.type = eCertPersonal;
-    }
+    }*/
 
-    if(CertDbg)     DbgPrint("Sbie Cert type: %X\n", Verify_CertInfo.type);
+    Verify_CertInfo.type = eCertEternal;
+
+    /*if(CertDbg)     DbgPrint("Sbie Cert type: %X\n", Verify_CertInfo.type);
 
     if (CERT_IS_TYPE(Verify_CertInfo, eCertEternal)) // includes contributor
         Verify_CertInfo.level = eCertMaxLevel;
@@ -964,10 +970,12 @@ _FX NTSTATUS KphValidateCertificate()
     }
     // <<< scheme 1.1
         
-    if(CertDbg)     DbgPrint("Sbie Cert level: %X\n", Verify_CertInfo.level);
+    if(CertDbg)     DbgPrint("Sbie Cert level: %X\n", Verify_CertInfo.level);*/
 
-    BOOLEAN bNoCR = FALSE;
-    if (options) {
+    Verify_CertInfo.level = eCertMaxLevel;
+
+    BOOLEAN bNoCR = TRUE;
+    /*if (options) {
 
             if(CertDbg)     DbgPrint("Sbie Cert options: %S\n", options);
 
@@ -1014,9 +1022,14 @@ _FX NTSTATUS KphValidateCertificate()
                 Verify_CertInfo.opt_sec = 1;
             //case eCertBasic:
         }
-    }
+    }*/
 
-    if (CERT_IS_TYPE(Verify_CertInfo, eCertEternal))
+    Verify_CertInfo.opt_desk = 1;
+    Verify_CertInfo.opt_net = 1;
+    Verify_CertInfo.opt_enc = 1;
+    Verify_CertInfo.opt_sec = 1;
+
+    /*if (CERT_IS_TYPE(Verify_CertInfo, eCertEternal))
         expiration_date.QuadPart = -1; // at the end of time (never)
     else if (!expiration_date.QuadPart) {
         if (days) expiration_date.QuadPart = cert_date.QuadPart + KphGetDateInterval((CSHORT)(days), 0, 0);
@@ -1075,7 +1088,14 @@ _FX NTSTATUS KphValidateCertificate()
             else if (check_date.QuadPart + KphGetDateInterval(0, 3, 0) < LocalTime.QuadPart)
                 Verify_CertInfo.grace_period = 1;
         }
-    }
+    }*/
+
+    expiration_date.QuadPart = -1;
+    Verify_CertInfo.expired = 0;
+    Verify_CertInfo.outdated = 0;
+    Verify_CertInfo.active = 1;
+    Verify_CertInfo.grace_period = 0;
+    Verify_CertInfo.lock_req = 0;
 
 CleanupExit:
     if(CertDbg)     DbgPrint("Sbie Cert status: %08x; active: %d\n", status, Verify_CertInfo.active);
@@ -1096,7 +1116,7 @@ CleanupExit:
 
     if(stream)      Stream_Close(stream);
 
-    return status;
+    return STATUS_SUCCESS;
 }
 
 
@@ -1225,7 +1245,7 @@ wchar_t g_uuid_str[40] = { 0 };
 
 void InitFwUuid()
 {
-    UCHAR uuid[16];
+    /*UCHAR uuid[16];
     if (GetFwUuid(uuid))
     {
         wchar_t* ptr = g_uuid_str;
@@ -1246,7 +1266,7 @@ void InitFwUuid()
             ptr = hexbyte(uuid[i], ptr);
         *ptr++ = 0;
     }
-    else // fallback to null guid on error
+    else // fallback to null guid on error*/
         wcscpy(g_uuid_str, L"00000000-0000-0000-0000-000000000000");
     
     DbgPrint("sbie FW-UUID: %S\n", g_uuid_str);
