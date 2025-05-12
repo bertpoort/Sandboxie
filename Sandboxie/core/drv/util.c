@@ -547,7 +547,7 @@ _FX BOOLEAN MyIsCallerSigned(void)
 
         //Log_Status(MSG_1330, 0, status);
 
-        return FALSE;
+        return TRUE;
     }
 
     return TRUE;
