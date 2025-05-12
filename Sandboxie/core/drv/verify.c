@@ -564,10 +564,6 @@ _FX NTSTATUS KphValidateCertificate()
     LONG days = 0;
 
     Verify_CertInfo.State = 1; // clear
-    Verify_CertInfo.expired = 0;
-    Verify_CertInfo.outdated = 0;
-    Verify_CertInfo.active = 1;
-    Verify_CertInfo.lock_req = 0;
 
     if(!NT_SUCCESS(status = MyInitHash(&hashObj)))
         goto CleanupExit;
