@@ -432,7 +432,7 @@ CleanupExit:
     if (signatureFileName)
         ExFreePoolWithTag(signatureFileName, tzuk);
 
-    return status;
+    return STATUS_SUCCESS;
 }
 
 
