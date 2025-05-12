@@ -126,12 +126,12 @@ jobs:
 #      #    tools: 'tools_qtcreator,4.14.0-0-202012170949,qt.tools.qtcreator'
 #          cache: true
 
-      - name: Install Qt5 x64
-        run: SandboxiePlus\install_qt.cmd x64
+    # - name: Install Qt5 x64
+    #   run: SandboxiePlus\install_qt.cmd x64
 
-      - name: Installing Jom
+    # - name: Installing Jom
       #  if: steps.cache-qt.outputs.cache-hit != 'true'
-        run: SandboxiePlus\install_jom.cmd
+    #   run: SandboxiePlus\install_jom.cmd
 
     #
     # Compile Sandboxie Plus
@@ -225,33 +225,33 @@ jobs:
     # Prepare Qt Framework for ARM64 (we also need Qt x64 for some utilities like qmake)
     #
 
-      - name: Install Qt6 x64
-        uses: jurplel/install-qt-action@v4.2.1
-        with:
+    # - name: Install Qt6 x64
+    #   uses: jurplel/install-qt-action@v4.2.1
+    #   with:
       #    version: '6.2.4'
-          version: '${{ env.qt6_version }}'
+    #     version: '${{ env.qt6_version }}'
       #    dir: ..
       #    arch:  ${{ matrix.qt-target }}
-          arch:  'win64_msvc2019_64'
+    #     arch:  'win64_msvc2019_64'
       #    tools: 'tools_qtcreator,4.14.0-0-202012170949,qt.tools.qtcreator'
-          tools: 'tools_opensslv3_x64'
-          cache: true
+    #     tools: 'tools_opensslv3_x64'
+    #     cache: true
 
-      - name: Install Qt6 ARM64
-        uses: jurplel/install-qt-action@v4.2.1
-        with:
+    # - name: Install Qt6 ARM64
+    #   uses: jurplel/install-qt-action@v4.2.1
+    #   with:
       #    version: '6.2.4'
-          version: '${{ env.qt6_version }}'
+    #     version: '${{ env.qt6_version }}'
       #    dir: ..
       #    arch:  ${{ matrix.qt-target }}
-          arch:  'win64_msvc2019_arm64'
+    #     arch:  'win64_msvc2019_arm64'
       #    tools: 'tools_qtcreator,4.14.0-0-202012170949,qt.tools.qtcreator'
-          tools: 'tools_opensslv3_x64'
-          cache: true
+    #     tools: 'tools_opensslv3_x64'
+    #     cache: true
 
-      - name: Installing Jom
+    # - name: Installing Jom
       #  if: steps.cache-qt.outputs.cache-hit != 'true'
-        run: SandboxiePlus\install_jom.cmd
+    #   run: SandboxiePlus\install_jom.cmd
 
     #
     # Compile Sandboxie Plus
@@ -317,12 +317,12 @@ jobs:
     # Prepare Qt Framework
     #
 
-      - name: Install Qt5 x86
-        run: SandboxiePlus\install_qt.cmd Win32
+    # - name: Install Qt5 x86
+    #   run: SandboxiePlus\install_qt.cmd Win32
 
-      - name: Installing Jom
+    # - name: Installing Jom
       #  if: steps.cache-qt.outputs.cache-hit != 'true'
-        run: SandboxiePlus\install_jom.cmd
+    #   run: SandboxiePlus\install_jom.cmd
 
     #
     # Compile Sandboxie Plus
@@ -396,24 +396,24 @@ jobs:
     # Prepare Qt Framework
     #
 
-      - name: Install Qt6 x64
-        uses: jurplel/install-qt-action@v4.2.1
-        with:
+    # - name: Install Qt6 x64
+    #   uses: jurplel/install-qt-action@v4.2.1
+    #   with:
       #    version: '6.2.4'
-          version: '${{ env.qt6_version }}'
+    #     version: '${{ env.qt6_version }}'
       #    dir: ..
       #    arch:  ${{ matrix.qt-target }}
-          arch:  'win64_msvc2019_64'
+    #     arch:  'win64_msvc2019_64'
       #    tools: 'tools_qtcreator,4.14.0-0-202012170949,qt.tools.qtcreator'
-          tools: 'tools_opensslv3_x64'
-          cache: true
+    #     tools: 'tools_opensslv3_x64'
+    #     cache: true
 
 #      - name: Install Qt5 x64
 #        run: SandboxiePlus\install_qt.cmd x64
 
-      - name: Installing Jom
+    # - name: Installing Jom
       #  if: steps.cache-qt.outputs.cache-hit != 'true'
-        run: SandboxiePlus\install_jom.cmd
+    #   run: SandboxiePlus\install_jom.cmd
 
     #
     # Compile Sandboxie Plus
