@@ -2,6 +2,11 @@ name: CI
 
 on:
   workflow_dispatch:
+    inputs:
+      refToBuild:
+        description: 'Branch, tag or commit SHA1 to build'
+        required: true
+        type: string
 
   push:
     branches: [master, experimental]
@@ -90,6 +95,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
+        with:
+          ref: ${{ inputs.refToBuild }}
 
       - name: Load Variables from buildVariables.cmd
         shell: cmd
@@ -198,6 +205,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
+        with:
+          ref: ${{ inputs.refToBuild }}
 
       - name: Load Variables from buildVariables.cmd
         shell: cmd
@@ -304,6 +313,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
+        with:
+          ref: ${{ inputs.refToBuild }}
 
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
@@ -373,6 +384,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
+        with:
+          ref: ${{ inputs.refToBuild }}
 
       - name: Load Variables from buildVariables.cmd
         shell: cmd
