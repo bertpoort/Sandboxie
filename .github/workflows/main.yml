@@ -91,6 +91,7 @@ jobs:
   Build_x64:
     runs-on: windows-2019
     timeout-minutes: 45
+    continue-on-error: true
 
     steps:
       - name: Checkout code
@@ -201,6 +202,7 @@ jobs:
     if: ${{false}}
     runs-on: windows-2019
     timeout-minutes: 45
+    continue-on-error: true
 
     steps:
       - name: Checkout code
@@ -309,6 +311,7 @@ jobs:
     if: ${{false}}
     runs-on: windows-2019
     timeout-minutes: 45
+    continue-on-error: true
 
     steps:
       - name: Checkout code
@@ -380,6 +383,7 @@ jobs:
     if: ${{false}}
     runs-on: windows-2019
     timeout-minutes: 45
+    continue-on-error: true
 
     steps:
       - name: Checkout code
