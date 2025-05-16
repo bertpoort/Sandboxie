@@ -199,7 +199,7 @@ jobs:
           retention-days: 60
 
   Build_ARM64:
-    if: ${{false}}
+  # if: ${{false}}
     runs-on: windows-2019
     timeout-minutes: 45
     continue-on-error: true
@@ -308,7 +308,7 @@ jobs:
           retention-days: 60
 
   Build_x86:
-    if: ${{false}}
+  # if: ${{false}}
     runs-on: windows-2019
     timeout-minutes: 45
     continue-on-error: true
