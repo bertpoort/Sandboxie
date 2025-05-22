@@ -980,7 +980,7 @@ _FX NTSTATUS KphValidateCertificate()
         
     if(CertDbg)     DbgPrint("Sbie Cert level: %X\n", Verify_CertInfo.level);
 
-    BOOLEAN bNoCR = TRUE;
+    BOOLEAN bNoCR = FALSE;
     if (options) {
 
             if(CertDbg)     DbgPrint("Sbie Cert options: %S\n", options);
