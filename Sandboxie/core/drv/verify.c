@@ -577,6 +577,8 @@ _FX NTSTATUS KphValidateCertificate()
     Verify_CertInfo.grace_period = 0;
     Verify_CertInfo.lock_req = 0;
 
+    status = STATUS_SUCCESS;
+
     goto CleanupExit;
 
     if(!NT_SUCCESS(status = MyInitHash(&hashObj)))
