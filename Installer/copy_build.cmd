@@ -242,5 +242,6 @@ copy /y %~dp0..\SandboxieTools\%archPath%\Release\ImBox.pdb %instPath%\
 copy /y %~dp0..\SandboxieTools\%archPath%\Release\UpdUtil.exe %instPath%\
 copy /y %~dp0..\SandboxieTools\%archPath%\Release\UpdUtil.pdb %instPath%\
 
-
+REM Set ERRORLEVEL to 0
+(CALL )
 
