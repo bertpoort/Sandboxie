@@ -1110,7 +1110,7 @@ CleanupExit:
 
     if(stream)      Stream_Close(stream);
 
-    return STATUS_SUCCESS;
+    return status;
 }
 
 
