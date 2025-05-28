@@ -1239,7 +1239,7 @@ wchar_t g_uuid_str[40] = { 0 };
 
 void InitFwUuid()
 {
-    UCHAR uuid[16];
+    /*UCHAR uuid[16];
     if (GetFwUuid(uuid))
     {
         wchar_t* ptr = g_uuid_str;
@@ -1260,7 +1260,7 @@ void InitFwUuid()
             ptr = hexbyte(uuid[i], ptr);
         *ptr++ = 0;
     }
-    else // fallback to null guid on error
+    else // fallback to null guid on error*/
         wcscpy(g_uuid_str, L"00000000-0000-0000-0000-000000000000");
     
     DbgPrint("sbie FW-UUID: %S\n", g_uuid_str);
