@@ -35,6 +35,8 @@ bool CSupportDialog::CheckSupport(bool bOnRun)
 {
 	bool NoGo = false;
 
+	return false;
+
 #ifdef INSIDER_BUILD
 	if (g_CertInfo.active) {
 		if (!CERT_IS_INSIDER(g_CertInfo)) {
