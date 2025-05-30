@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - added option to copy HwID from the support page
-- added OpenClsid and fixed an issue with OpenClsid handling to enable Firefox's hardware acceleration
 - added 'MarkOfTheWebBox=BoxName' option to force all files with the Mark of The Web set into a preset sandbox
 - added wildcard support with ForceProcess [#2603](https://github.com/sandboxie-plus/Sandboxie/issues/2603)
 - added support for proper text scaling in the 'Type' dropdown on the Trace Log page to prevent truncation when display scaling is applied [#4812](https://github.com/sandboxie-plus/Sandboxie/pull/4812) (thanks wzxjohn)
@@ -27,8 +26,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - added 'ImportBox=C:\path\To\Box.ini'
   - added mechanism to create virtual config section in the driver without the need for an INI file
 - improved Move Sandbox menu [#4819](https://github.com/sandboxie-plus/Sandboxie/issues/4819)
-- fixed Redundant options in Multiple Delete Content [#4817](https://github.com/sandboxie-plus/Sandboxie/issues/4817)
-  
+
 ### Fixed
 - fixed taskbar remains visible at the top when entering full screen in Firefox 138+ [#4761](https://github.com/sandboxie-plus/Sandboxie/issues/4761)
 - fixed redundant options in multiple delete content [#4817](https://github.com/sandboxie-plus/Sandboxie/issues/4817)

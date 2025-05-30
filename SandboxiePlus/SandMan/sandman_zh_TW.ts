@@ -5033,7 +5033,7 @@ This file is part of Sandboxie and all changed done to it will be reverted next 
     <message>
         <location filename="SbieProcess.cpp" line="112"/>
         <source> fake Admin</source>
-        <translation type="unfinished"></translation>
+        <translation> 虛擬管理員</translation>
     </message>
     <message>
         <location filename="SbieProcess.cpp" line="115"/>
@@ -5569,7 +5569,7 @@ This file is part of Sandboxie and all changed done to it will be reverted next 
         <translation>是否刪除以下沙箱的內容？&lt;br /&gt;&lt;br /&gt;%1</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1747"/>
+        <location filename="Views/SbieView.cpp" line="1738"/>
         <source>Do you really want to delete the content of the following sandboxes?&lt;br /&gt;&lt;br /&gt;%1</source>
         <translation>是否確定要刪除以下沙箱的內容？&lt;br /&gt;&lt;br /&gt;%1</translation>
     </message>
@@ -5615,14 +5615,14 @@ This file is part of Sandboxie and all changed done to it will be reverted next 
     <message>
         <location filename="Views/SbieView.cpp" line="1389"/>
         <location filename="Views/SbieView.cpp" line="1459"/>
-        <location filename="Views/SbieView.cpp" line="1800"/>
+        <location filename="Views/SbieView.cpp" line="1790"/>
         <source>Don&apos;t show this message again.</source>
         <translation>不再顯示此訊息。</translation>
     </message>
     <message>
         <location filename="Views/SbieView.cpp" line="1450"/>
         <location filename="Views/SbieView.cpp" line="1470"/>
-        <location filename="Views/SbieView.cpp" line="1978"/>
+        <location filename="Views/SbieView.cpp" line="1968"/>
         <source>This Sandbox is empty.</source>
         <translation>此沙箱為空。</translation>
     </message>
@@ -5713,8 +5713,8 @@ This file is part of Sandboxie and all changed done to it will be reverted next 
         <translation type="vanished">是否刪除所選沙箱的內容？</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1730"/>
-        <location filename="Views/SbieView.cpp" line="1760"/>
+        <location filename="Views/SbieView.cpp" line="1728"/>
+        <location filename="Views/SbieView.cpp" line="1751"/>
         <source>Also delete all Snapshots</source>
         <translation>同時刪除所有快照</translation>
     </message>
@@ -5723,46 +5723,46 @@ This file is part of Sandboxie and all changed done to it will be reverted next 
         <translation type="vanished">是否刪除全部已選沙箱的內容？</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1782"/>
+        <location filename="Views/SbieView.cpp" line="1772"/>
         <source>Do you want to terminate all processes in the selected sandbox(es)?</source>
         <translation>是否終止選定沙箱中的所有處理程序？</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1783"/>
-        <location filename="Views/SbieView.cpp" line="1879"/>
+        <location filename="Views/SbieView.cpp" line="1773"/>
+        <location filename="Views/SbieView.cpp" line="1869"/>
         <source>Terminate without asking</source>
         <translation>終止且不再詢問</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1798"/>
+        <location filename="Views/SbieView.cpp" line="1788"/>
         <source>The Sandboxie Start Menu will now be displayed. Select an application from the menu, and Sandboxie will create a new shortcut icon on your real desktop, which you can use to invoke the selected application under the supervision of Sandboxie.</source>
         <oldsource>The Sandboxie Start Menu will now be displayed. Select an application from the menu, and Sandboxie will create a newshortcut icon on your real desktop, which you can use to invoke the selected application under the supervision of Sandboxie.</oldsource>
         <translation>現在將顯示 Sandboxie 開始選單。從選單中選擇一個應用程式，Sandboxie 將在真實桌面上建立一個新的捷徑圖示，您可以用它來呼叫所選受 Sandboxie 監督的應用程式。</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1853"/>
-        <location filename="Views/SbieView.cpp" line="1907"/>
+        <location filename="Views/SbieView.cpp" line="1843"/>
+        <location filename="Views/SbieView.cpp" line="1897"/>
         <source>Create Shortcut to sandbox %1</source>
         <translation>為沙箱 %1 建立捷徑</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1878"/>
+        <location filename="Views/SbieView.cpp" line="1868"/>
         <source>Do you want to terminate %1?</source>
         <oldsource>Do you want to %1 %2?</oldsource>
         <translation>是否終止 %1？</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1878"/>
+        <location filename="Views/SbieView.cpp" line="1868"/>
         <source>the selected processes</source>
         <translation>選取的處理程序</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="1937"/>
+        <location filename="Views/SbieView.cpp" line="1927"/>
         <source>This box does not have Internet restrictions in place, do you want to enable them?</source>
         <translation>此沙箱無網際網路限制，確定要啟用嗎？</translation>
     </message>
     <message>
-        <location filename="Views/SbieView.cpp" line="2028"/>
+        <location filename="Views/SbieView.cpp" line="2018"/>
         <source>This sandbox is currently disabled or restricted to specific groups or users. Would you like to allow access for everyone?</source>
         <oldsource>This sandbox is disabled or restricted to a group/user, do you want to allow box for everybody ?</oldsource>
         <translation>此沙箱已停用或被限制至特定群組/使用者，是否允許所有人存取？</translation>
@@ -7763,7 +7763,7 @@ If you are a great patreaon supporter already, sandboxie can check online for an
     <message>
         <location filename="Forms/OptionsWindow.ui" line="698"/>
         <source>Issue message 2102 when a file is too large</source>
-        <translation>當檔案過大時發出錯誤代碼 2102</translation>
+        <translation>當檔案過大時發出錯誤代碼 SBIE2102</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="563"/>
@@ -8050,7 +8050,7 @@ If you are a great patreaon supporter already, sandboxie can check online for an
     <message>
         <location filename="Forms/OptionsWindow.ui" line="1552"/>
         <source>Issue message 1318/1317 when a host process tries to access a sandboxed process/the box root</source>
-        <translation>當主機處理程序嘗試存取沙箱化處理程序/沙箱根目錄時發出錯誤代碼 1318/1317</translation>
+        <translation>當主機處理程序嘗試存取沙箱化處理程序/沙箱根目錄時發出錯誤代碼 SBIE1318 / SBIE1317</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="1496"/>
@@ -8160,7 +8160,7 @@ If you are a great patreaon supporter already, sandboxie can check online for an
     <message>
         <location filename="Forms/OptionsWindow.ui" line="2755"/>
         <source>Issue message 1308 when a program fails to start</source>
-        <translation>當程式啟動失敗時發出錯誤代碼 1308</translation>
+        <translation>當程式啟動失敗時發出錯誤代碼 SBIE1308</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="2705"/>
@@ -8195,7 +8195,7 @@ If you are a great patreaon supporter already, sandboxie can check online for an
     <message>
         <location filename="Forms/OptionsWindow.ui" line="3486"/>
         <source>Issue message 1307 when a program is denied internet access</source>
-        <translation>當程式被拒絕存取網路時發出錯誤代碼 1307</translation>
+        <translation>當程式被拒絕存取網路時發出錯誤代碼 SBIE1307</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="3500"/>
@@ -8242,14 +8242,14 @@ If you are a great patreaon supporter already, sandboxie can check online for an
         <source>2113: Content of migrated file was discarded
 2114: File was not migrated, write access to file was denied
 2115: File was not migrated, file will be opened read only</source>
-        <translation>2113: 待遷移檔案的內容被廢棄了
-2114: 檔案沒有被遷移，檔案的寫入存取被拒絕
-2115: 檔案沒有被遷移，檔案將以唯讀方式開啟</translation>
+        <translation>SBIE2113: 待遷移檔案的內容被廢棄了
+SBIE2114: 檔案沒有被遷移，檔案的寫入存取被拒絕
+SBIE2115: 檔案沒有被遷移，檔案將以唯讀方式開啟</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="588"/>
         <source>Issue message 2113/2114/2115 when a file is not fully migrated</source>
-        <translation>當一個檔案沒有被完全遷移時，發出錯誤代碼 2113/2114/2115</translation>
+        <translation>當一個檔案沒有被完全遷移時，發出錯誤代碼 SBIE2113 / SBIE2114 / SBIE2115</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="612"/>
@@ -8711,7 +8711,7 @@ To specify a process use &apos;$:program.exe&apos; as path.</source>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="827"/>
         <source>Issue message 2111 when a process access is denied</source>
-        <translation>處理程序被拒絕存取非沙箱處理程序記憶體時發出錯誤代碼 2111</translation>
+        <translation>處理程序被拒絕存取非沙箱處理程序記憶體時發出錯誤代碼 SBIE2111</translation>
     </message>
     <message>
         <location filename="Forms/OptionsWindow.ui" line="526"/>
@@ -9695,7 +9695,7 @@ Please note that this values are currently user specific and saved globally for 
 <context>
     <name>QObject</name>
     <message>
-        <location filename="Views/SbieView.cpp" line="1835"/>
+        <location filename="Views/SbieView.cpp" line="1825"/>
         <source>Drive %1</source>
         <translation>磁碟機 %1</translation>
     </message>
@@ -10528,7 +10528,7 @@ Please note that this values are currently user specific and saved globally for 
     <message>
         <location filename="Forms/SettingsWindow.ui" line="2630"/>
         <source>Issue message 1308 when a program fails to start</source>
-        <translation>當程式啟動失敗時發出錯誤代碼 1308</translation>
+        <translation>當程式啟動失敗時發出錯誤代碼 SBIE1308</translation>
     </message>
     <message>
         <location filename="Forms/SettingsWindow.ui" line="106"/>
@@ -10588,7 +10588,7 @@ Please note that this values are currently user specific and saved globally for 
     <message>
         <location filename="Forms/SettingsWindow.ui" line="2609"/>
         <source>Issue message 1301 when forced processes has been disabled</source>
-        <translation>當強制沙箱處理程序被停用時，發出錯誤代碼 1301</translation>
+        <translation>當強制沙箱處理程序被停用時，發出錯誤代碼 SBIE1301</translation>
     </message>
     <message>
         <location filename="Forms/SettingsWindow.ui" line="2108"/>
@@ -10789,7 +10789,7 @@ Unlike the preview channel, it does not include untested, potentially breaking, 
         <location filename="Forms/SettingsWindow.ui" line="2651"/>
         <source>Issue message 1321 when a process has been forced into a sandbox</source>
         <oldsource>Issue message 1321 when a processes has been forced in to a sandbox</oldsource>
-        <translation>當程式已被強制執行至一個沙箱時，發出錯誤代碼 1321</translation>
+        <translation>當程式已被強制執行至一個沙箱時，發出錯誤代碼 SBIE1321</translation>
     </message>
     <message>
         <location filename="Forms/SettingsWindow.ui" line="2661"/>
@@ -11031,7 +11031,7 @@ Unlike the preview channel, it does not include untested, potentially breaking, 
     <message>
         <location filename="Forms/TestProxyDialog.ui" line="69"/>
         <source>Test Settings...</source>
-        <translation>測試設定中...</translation>
+        <translation>測試設定...</translation>
     </message>
     <message>
         <location filename="Forms/TestProxyDialog.ui" line="82"/>
@@ -11108,7 +11108,7 @@ Unlike the preview channel, it does not include untested, potentially breaking, 
     <message>
         <location filename="Forms/TestProxyDialog.ui" line="293"/>
         <source>Test 2: Connection through the Proxy Server</source>
-        <translation>測試2: 透過 Proxy 伺服器連線</translation>
+        <translation>測試2: 透過 Proxy 伺服器建立連線</translation>
     </message>
     <message>
         <location filename="Forms/TestProxyDialog.ui" line="330"/>
@@ -11138,7 +11138,7 @@ Unlike the preview channel, it does not include untested, potentially breaking, 
     <message>
         <location filename="Forms/TestProxyDialog.ui" line="382"/>
         <source>Test 3: Proxy Server latency</source>
-        <translation>測試 3 : Proxy 伺服器延遲</translation>
+        <translation>測試 3 : Proxy 伺服器的延遲</translation>
     </message>
     <message>
         <location filename="Forms/TestProxyDialog.ui" line="416"/>
