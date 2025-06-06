@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.16.0 / 5.71.0] - 2025-05-??
+## [1.16.0 / 5.71.0] - 2025-06-03
 
 ### Added
 - added option to copy HwID from the support page
@@ -32,6 +32,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - fixed redundant options in multiple delete content [#4817](https://github.com/sandboxie-plus/Sandboxie/issues/4817)
 - fixed Sandboxie Plus closes unexpectedly
 - fixed Page display abnormality [#4810](https://github.com/sandboxie-plus/Sandboxie/issues/4810)
+- fixed working directory when running program from context menu on Windows 11 [#4844](https://github.com/sandboxie-plus/Sandboxie/pull/4844) (thanks micbou)
+
 
 
 ## [1.15.12 / 5.70.12] - 2025-05-01
