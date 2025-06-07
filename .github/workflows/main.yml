@@ -89,7 +89,7 @@ env:
 
 jobs:
   Build_x64:
-    runs-on: windows-2019
+    runs-on: windows-2022
     timeout-minutes: 45
     continue-on-error: true
 
@@ -200,7 +200,7 @@ jobs:
 
   Build_ARM64:
   # if: ${{false}}
-    runs-on: windows-2019
+    runs-on: windows-2022
     timeout-minutes: 45
     continue-on-error: true
 
@@ -309,7 +309,7 @@ jobs:
 
   Build_x86:
   # if: ${{false}}
-    runs-on: windows-2019
+    runs-on: windows-2022
     timeout-minutes: 45
     continue-on-error: true
 
@@ -381,7 +381,7 @@ jobs:
 
   Build_x64_Qt6:
     if: ${{false}}
-    runs-on: windows-2019
+    runs-on: windows-2022
     timeout-minutes: 45
     continue-on-error: true
 
