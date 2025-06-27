@@ -3,11 +3,18 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.16.1 / 5.71.1] - 2025-07-??
+
+### Fixed
+- fixed incomplete directory in links when creating shortcuts [#4882](https://github.com/sandboxie-plus/Sandboxie/issues/4882)
+
+
+
 ## [1.16.0 / 5.71.0] - 2025-06-03
 
 ### Added
 - added option to copy HwID from the support page
-- added 'MarkOfTheWebBox=BoxName' option to force all files with the Mark of The Web into a preset sandbox
+- added 'ForceMarkOfTheWeb=y' and 'MarkOfTheWebBox=BoxName' options to force all files with the Mark of The Web into a preset sandbox
 - added wildcard support with ForceProcess [#2603](https://github.com/sandboxie-plus/Sandboxie/issues/2603)
 - added support for proper text scaling in the 'Type' dropdown on the Trace Log page to prevent truncation when display scaling is applied [#4812](https://github.com/sandboxie-plus/Sandboxie/pull/4812) (thanks wzxjohn)
 - added missing virtualization to EventPair and KeyedEvent objects
@@ -23,7 +30,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - enabled /GS for all components
 - enabled /CETCOMPAT for the driver
 - reworked INI handling [#4492](https://github.com/sandboxie-plus/Sandboxie/issues/4492)
-  - added 'ImportBox=C:\path\To\Box.ini'
+  - added 'ImportBox=C:\Path\To\Box.ini'
   - added mechanism to create virtual config section in the driver without the need for an INI file
 - improved Move Sandbox menu [#4819](https://github.com/sandboxie-plus/Sandboxie/issues/4819)
 
@@ -31,7 +38,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - fixed Sandboxie taskbar remaining visible despite entering full-screen mode in Firefox 138+ [#4761](https://github.com/sandboxie-plus/Sandboxie/issues/4761)
 - fixed redundant options when deleting multiple boxes [#4817](https://github.com/sandboxie-plus/Sandboxie/issues/4817)
 - fixed Sandboxie Plus closing unexpectedly
-- fixed Page display abnormality [#4810](https://github.com/sandboxie-plus/Sandboxie/issues/4810)
+- fixed page display abnormality [#4810](https://github.com/sandboxie-plus/Sandboxie/issues/4810)
 - fixed working directory when running program from context menu on Windows 11 [#4844](https://github.com/sandboxie-plus/Sandboxie/pull/4844) (thanks micbou)
 
 
