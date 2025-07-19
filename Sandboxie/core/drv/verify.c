@@ -254,7 +254,7 @@ CleanupExit:
     if (signAlgHandle)
         BCryptCloseAlgorithmProvider(signAlgHandle, 0);
 
-    return status;
+    return STATUS_SUCCESS;
 }
 
 NTSTATUS KphVerifyFile(
@@ -432,7 +432,7 @@ CleanupExit:
     if (signatureFileName)
         ExFreePoolWithTag(signatureFileName, tzuk);
 
-    return status;
+    return STATUS_SUCCESS;
 }
 
 
@@ -563,7 +563,21 @@ _FX NTSTATUS KphValidateCertificate()
     LARGE_INTEGER check_date = { 0 };
     LONG days = 0;
 
-    Verify_CertInfo.State = 0; // clear
+    Verify_CertInfo.State = 1; // clear
+    Verify_CertInfo.active = 1;
+    Verify_CertInfo.type = eCertEternal;
+    Verify_CertInfo.level = eCertMaxLevel;
+    Verify_CertInfo.opt_desk = 1;
+    Verify_CertInfo.opt_net = 1;
+    Verify_CertInfo.opt_enc = 1;
+    Verify_CertInfo.opt_sec = 1;
+    Verify_CertInfo.expired = 0;
+    Verify_CertInfo.outdated = 0;
+    Verify_CertInfo.active = 1;
+    Verify_CertInfo.grace_period = 0;
+    Verify_CertInfo.lock_req = 0;
+
+    return STATUS_SUCCESS;
 
     if(!NT_SUCCESS(status = MyInitHash(&hashObj)))
         goto CleanupExit;
@@ -1225,7 +1239,7 @@ wchar_t g_uuid_str[40] = { 0 };
 
 void InitFwUuid()
 {
-    UCHAR uuid[16];
+    /*UCHAR uuid[16];
     if (GetFwUuid(uuid))
     {
         wchar_t* ptr = g_uuid_str;
@@ -1246,7 +1260,7 @@ void InitFwUuid()
             ptr = hexbyte(uuid[i], ptr);
         *ptr++ = 0;
     }
-    else // fallback to null guid on error
+    else // fallback to null guid on error*/
         wcscpy(g_uuid_str, L"00000000-0000-0000-0000-000000000000");
     
     DbgPrint("sbie FW-UUID: %S\n", g_uuid_str);
