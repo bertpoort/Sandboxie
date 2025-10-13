@@ -201,5 +201,11 @@ copy /y %~dp0..\SandboxieTools\%archPath%\Release\ImBox.pdb %instPath%\
 copy /y %~dp0..\SandboxieTools\%archPath%\Release\UpdUtil.exe %instPath%\
 copy /y %~dp0..\SandboxieTools\%archPath%\Release\UpdUtil.pdb %instPath%\
 
+copy /y %~dp0..\Sandboxie\install\LICENSE.TXT %instPath%\
+copy /y %~dp0..\Sandboxie\COPYING %instPath%\
+
+REM Set ERRORLEVEL to 0
+(CALL )
+
 
 
