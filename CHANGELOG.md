@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.17.5 / 5.72.5] - 2026-04-??
+## [1.17.5 / 5.72.5] - 2026-05-02
 
 ### Added
 - added workaround for SBIE2205 OpenDesktop when requesting default desktop
@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - fixed box rename failing with "The parameter is incorrect" since 1.17.3, caused by multi-line section content being rejected by the new ContainsCRLF check in CIniFile::AddValue
 - fixed renamed sandbox not being re-selected in the UI after a successful rename
 - fixed sandboxed app tray icons not showing with `OpenWinClass=*` by proxying `Shell_NotifyIcon`; can be disabled with `UseShellNotifyIconProxy` (default enabled, supports `process` and `!process` selectors)
+- fixed track WS_EX_TOPMOST extended style, detect topmost state changes, and use appropriate HWND_TOPMOST vs HWND_TOP ordering to ensure correct border visibility and z-order when topmost status changes. [#5358](https://github.com/sandboxie-plus/Sandboxie/issues/5358)
 
 
 
@@ -83,14 +84,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - fixed parsing logic for `ClosedClsid` and `ClosedRT` settings [#5263](https://github.com/sandboxie-plus/Sandboxie/pull/5263)
 - FIXED SECURITY ISSUE ID-32: EditPassword Hash Entropy Loss, new passwords will be salted SHA-256 and Base64-encoded
   - Note: the fix only takes effect when the password is being set, existing passwords remain weak
+- FIXED SECURITY ISSUE ID-33
 - fixed Local Denial of Service (DoS) Vulnerability Exploitable by Sandboxed Process CVE-2026-32603 (reported by sammy12342)
-- fixed Sandboxie-Plus EditAdminOnly Bypass via INI CRLF Injection (reported by sammy12342)
-- fixed issues with GetRawInputDeviceInfoSlave (reported by sammy12342)
-- fixed an issue with RunSbieCtrl (reported by Yanchon918s)
-- fixed name validation in ProcessServer handlers (reported by Yanchon918s)
-- fixed parameter validation in NamedPipeServer (reported by Yanchon918s)
-- fixed file integrity issues with updater (reported by sammy12342)
-
+- FIXED SECURITY ISSUE ID-34
+- fixed Sandboxie-Plus EditAdminOnly Bypass via INI CRLF Injection CVE-2026-34458 (reported by sammy12342)
+- FIXED SECURITY ISSUE ID-35
+- fixed issues with GetRawInputDeviceInfoSlave CVE-2026-34459 (reported by sammy12342)
+- FIXED SECURITY ISSUE ID-36
+- fixed an issue with RunSbieCtrl CVE-2026-34461 (reported by Yanchon918s)
+- FIXED SECURITY ISSUE ID-37
+- fixed name validation in ProcessServer handlers CVE-2026-34462 (reported by Yanchon918s)
+- FIXED SECURITY ISSUE ID-38
+- fixed parameter validation in NamedPipeServer CVE-2026-34464 (reported by Yanchon918s)
+- FIXED SECURITY ISSUE ID-39
+- fixed Local Privilege Escalation via TOCTOU in UpdUtil Addon Installation CVE-2026-34596 (reported by sammy12342)
 
 
 ## [1.17.2 / 5.72.2] - 2026-02-18
