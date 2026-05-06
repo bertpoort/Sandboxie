@@ -95,6 +95,8 @@ jobs:
   # if: ${{false}}
     runs-on: windows-2022
     timeout-minutes: 45
+    permissions:
+      contents: read
   # continue-on-error: true
 
     steps:
@@ -162,6 +164,8 @@ jobs:
   # if: ${{false}}
     runs-on: windows-2022
     timeout-minutes: 45
+    permissions:
+      contents: read
   # continue-on-error: true
 
     steps:
