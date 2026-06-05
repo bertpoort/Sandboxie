@@ -92,7 +92,7 @@ env:
   #ghQtBuilds_hash_x64: 673c288feeabd11ec66f9f454d49cde3945cbd3e3f71283b7a6c4df0893b19f2
 
 jobs:
-          
+
   Build_x64_Qt6:
   # if: ${{false}}
     runs-on: windows-2022
@@ -127,7 +127,7 @@ jobs:
 
       - name: Build Sandboxie x64 (all)
         run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
-        
+
       - name: Build Sandboxie x64 (drv)
         run: msbuild /t:build Sandboxie\SandboxDrv.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
 
@@ -140,15 +140,6 @@ jobs:
 
       - name: Collect installer assets
         run: Installer\get_assets.cmd
-
-    # - name: Upload installer assets
-    #   #if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
-    #   uses: actions/upload-artifact@v7.0.1
-    #   with:
-    #     name: Assets
-    #     path: |
-    #       Installer/Assets/*
-    #     retention-days: 60
 
       - name: Upload Sandboxie x64
         #if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
