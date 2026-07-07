@@ -9,7 +9,7 @@ on:
         type: string
 
   push:
-    branches: [master, experimental]
+    branches: [experimental, experimental2]
     paths-ignore:
       # Case-sensitive paths to ignore on push events
       - '.editorconfig'
@@ -43,7 +43,7 @@ on:
       - '**/AUTHORS'
       - '**/COPYING'
   pull_request:
-    branches: [master, experimental]
+    branches: [experimental, experimental2]
     paths-ignore:
       # Case-sensitive paths to ignore on pull events
       - '.editorconfig'
