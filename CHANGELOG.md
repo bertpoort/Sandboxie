@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.18.2  5.73.2] - 2026-08-??
+## [1.18.2 / 5.73.2] - 2026-08-??
 
 ### Added
 - added outside sandboxed-window border modes (`onoutside`, `ttloutside`, and `alloutside`) in SandMan; these draw the configured border outside the application frame, while the new `BorderInsideMaximized=y` setting (enabled by default) moves the border and label inside maximized or snapped windows so they remain visible
@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - fixed SandMan File Panel column widths resetting when switching between boxes [#5473](https://github.com/sandboxie-plus/Sandboxie/issues/5473)
+- fixed a bug that could cause the list of open handles to be reported incorrectly [#5502](https://github.com/sandboxie-plus/Sandboxie/pull/5502) (thanks NSShannon)
 - fixed SandMan File Panel and Browse Files blocking Recycle Bin deletion of expanded folder trees, and made file-name sorting case-insensitive [#5499](https://github.com/sandboxie-plus/Sandboxie/issues/5499)
 - fixed SandMan Box Groups collapsing during refreshes, restarts, and sandbox moves despite remembered group state [#5477](https://github.com/sandboxie-plus/Sandboxie/issues/5477)
 
